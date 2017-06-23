@@ -1,0 +1,4 @@
+argh.o: argh.c argh.h
+snapscreenshot.o: snapscreenshot.cc argh.h autoptr
+argh.lo: argh.c argh.h
+snapscreenshot.lo: snapscreenshot.cc argh.h autoptr

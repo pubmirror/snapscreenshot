@@ -1,0 +1,58 @@
+.TH snapscreenshot 1 "December 18, 2002"
+.SH NAME
+snapscreenshot \- takes snapshot from your Linux console(s) and outputs a Targa file
+.SH SYNOPSIS
+.B snapscreenshot
+.RI [ -hfb1cxV ]
+.R > " file.tga"
+.SH DESCRIPTION
+This manual page documents briefly the
+.B snapscreenshot
+command.
+.PP
+\fBsnapscreenshot\fP is a program that takes snapshot from your Linux 
+console(s) and outputs a Targa file.
+You can use convert(1) to convert the resulting image to various formats.
+.SH OPTIONS
+This program follows the usual GNU command line syntax, with long
+options starting with two dashes (`-').
+A summary of options is included below.
+.TP
+.B \-h, \-\-help
+Show summary of options.
+.TP
+.B \-f, \-\-fontwidth
+Font width (8 or 9, default: 9)
+.TP
+.B \-b, \-\-border
+Border colour (0..15, default: 9)
+.TP
+.B \-1, \-\-firstwin
+Specify the index of first window
+.TP
+.B \-c, \-\-num
+Specify number of windows (default: 24)
+.TP
+.B \-x, \-\-alongside
+Specify number of windows horizontally (4)
+.TP
+.B \-V, \-\-version
+Show version of program.
+.SH EXAMPLES
+snapscreenshot -c2 -x1 > \fBsnap.tga\fP && convert \fBsnap.tga\fP \fBsnap.png\fP
+.PP
+sleep 5; snapscreenshot -c6 -x2 > \fBsnap.tga\fP
+.SH NOTES
+\fBsnapscreenshot\fP can be used by anyone having reading permissions to 
+the /dev/vcs* files. Usually, the owner:group for these files is root:root,
+with 600 permissions. 
+.PP
+Giving world reading rights to /dev/vcs* might not be
+a good idea, but creating a new user group and chgrping the files and
+setting the mode 660, and not forgetting to add yourself to the group,
+could be reasonable.
+.PP
+Another idea would be to adapt the method used in ttys: automatically chown
+the devices by the user who is currently logged in there.
+.SH AUTHOR
+This manual page was written by Quique <quique@sindominio.net>.

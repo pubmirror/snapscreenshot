@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo Configuring...
+sleep 1
+echo Fine. Done. make.

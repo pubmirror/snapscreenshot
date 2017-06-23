@@ -1,0 +1,4 @@
+#!/bin/sh
+make -j snapscreenshot
+snapscreenshot >snap.tga
+nice --20 convert snap.tga -geometry 2160x1701\! -quality 50 snap.jpg

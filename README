@@ -1,0 +1,63 @@
+This program takes snapshots from Linux consoles.
+Preferable all of them.
+
+Author: Joel Yliluoma
+	http://iki.fi/bisqwit/
+
+Usages: snapscreenshot --help
+	snapscreenshot >snap.tga
+	snapscreenshot -c6 -x3 >snap.tga
+	./examplerun
+
+Installation:
+	./configure
+	make install
+	
+Uninstallation:
+	make uninstall
+
+Version history:
+
+2000-08-15 22:00 Bisqwit <bisqwit@iki.fi>
+	Initial idea
+
+2000-08-16 13:00 Bisqwit <bisqwit@iki.fi>
+	Initial version, some snapshots.
+	Arg handling etc.
+	Version 1.0.1
+
+2000-08-16 14:00 Bisqwit <bisqwit@iki.fi>
+	Found a bug, fixed it.
+	Now other than 120 character
+	wide terminals work also ok.
+	Version 1.0.2
+
+2000-08-16 15:30 Bisqwit <bisqwit@iki.fi>
+	Added README
+	Added "make install".
+	Added "make uninstall".
+	Version 1.0.3
+
+2000-08-16 15:50 Bisqwit <bisqwit@iki.fi>
+	Added -b (border colour) option.
+	Added -f (font width) option.
+	Added auto pointers class.
+	Version 1.0.4
+
+2000-08-16 16:00 Bisqwit <bisqwit@iki.fi>
+	Added configure script.
+	Version 1.0.5
+
+2000-08-16 18:50 Bisqwit <bisqwit@iki.fi>
+	Removed +x -modes for source files :)
+	Version 1.0.6
+
+2000-08-16 02:37 Bisqwit <bisqwit@iki.fi>
+	Version 1.0.8
+	(Forgot to update this changelog,
+	 see options list to see whatever
+	 has changed. ;))
+
+2001-10-14 18:50 Bisqwit <bisqwit@iki.fi>
+	Added some documentation.
+	Version 1.0.10

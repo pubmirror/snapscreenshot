@@ -1,0 +1,98 @@
+<html><head><meta http-equiv="Content-type" content="text/html; charset=iso-8859-1">
+ <title>Screenshot program for Linux text console(s)</title>
+ <style type="text/css"><!--
+TABLE.toc {border:0px}
+A:link,A:visited{text-decoration:none;color:#2A3B83}
+A:hover{text-decoration:underline;color:#002040}
+A:active{text-decoration:underline;color:#004060;background:#CCD8FF}
+TD.toc   {font-size:80%; font-family:Tahoma; text-align:left}
+H1       {font-size:250%; font-weight:bold} .level1 {text-align:center}
+H2       {font-size:200%; font-weight:bold} .level2 {margin-left:1%}
+H3       {font-size:160%; font-weight:bold} .level3 {margin-left:2%}
+H4       {font-size:145%; font-weight:bold} .level4 {margin-left:3%}
+H5       {font-size:130%; font-weight:bold} .level5 {margin-left:4%}
+H6       {font-size:110%; font-weight:bold} .level5 {margin-left:5%}
+BODY{background:white;color:black}
+CODE{font-family:lucida console,courier new,courier;color:#105000}
+PRE.smallerpre{font-family:lucida console,courier new,courier;font-size:80%;color:#500010;margin-left:30px}
+SMALL    {font-size:70%}
+.nonmail { visibility:hidden;position:absolute; top:0px;left:0px }
+.ismail  { font-weight:normal }
+--></style></head>
+ <body>
+  <h1>Screenshot program for Linux text console(s)</h1>
+  <h2 class=level2> 0. Contents </h2>
+  
+  This is the documentation of snapscreenshot-1.0.14.3.
+<div class=toc><table cellspacing=0 cellpadding=0 class=toc><tr><td width="50%" valign=middle align=left nowrap class=toc>&nbsp;&nbsp;&nbsp;1. <a href="#h0">Purpose</a><br>&nbsp;&nbsp;&nbsp;2. <a href="#h1">Copying</a><br></td>
+<td width="50%" valign=middle align=left nowrap class=toc>&nbsp;&nbsp;&nbsp;3. <a href="#h2">FAQ</a><br>&nbsp;&nbsp;&nbsp;4. <a href="#h3">Requirements</a><br>&nbsp;&nbsp;&nbsp;5. <a href="#download">Downloading</a><br></td>
+</tr></table></div><H2 id="h0" class="level2"><a name="h0"></a>1. Purpose</H2><div class="level2" id="divh0">
+
+<pre class=smallerpre>snapscreenshot version 1.0.14.2
+Copyright (C) 1992,2003 Bisqwit (http://iki.fi/bisqwit/)
+
+Takes snapshot from your Linux console(s) and outputs a Targa file.
+You can use convert(1) to convert the resulting image to various formats.
+
+Usage: snapscreenshot [-hfb1cxV] &gt; snap.tga
+
+  -h, --help          Help
+  -f, --fontwidth     Font width (8 or 9, default: 9)
+  -b, --border        Border colour (0..15, default: 9)
+  -1, --firstwin      Specify the index of first window
+  -c, --num           Specify number of windows (default: 6)
+  -x, --alongside     Specify number of windows horizontally (4)
+  -V, --version       Version information
+
+</pre>
+<!--br>
+Example screenshots:
+<a href="http://oktober.stc.cx/kala/radio2.jpg">radio2.jpg</a> (100 kB),
+<a href="http://oktober.stc.cx/kala/full.png">full.png</a> (250 kB *big*)
+-->
+
+</div><H2 id="h1" class="level2"><a name="h1"></a>2. Copying</H2><div class="level2" id="divh1">
+
+snapscreenshot has been written by Joel Yliluoma, a.k.a.
+<a href="http://iki.fi/bisqwit/">Bisqwit</a>,<br>
+and is distributed under the terms of the
+<a href="http://www.gnu.org/licenses/licenses.html#GPL">General Public License</a> (GPL).
+<p>
+If you happen to see this program useful for you, I'd
+appreciate if you tell me :) Perhaps it would motivate
+me to enhance the program.
+
+</div><H2 id="h2" class="level2"><a name="h2"></a>3. FAQ</H2><div class="level2" id="divh2">
+
+<b>Q</b>:
+ I have 132x50 text mode with 8x8 font, and when I take
+ a snapshot, it looks very wide and not tall... Why does
+ snapscreenshot mess the ratio?<br>
+<b>A</b>:
+ snapscreenshot doesn't save or even know about dot-per-inch
+ ratios, and neither do most image display programs.<br>
+ 132x50 with 8x8 font means 1054x400 pixel resolution,
+ and you clearly can see that 1054 is over two times 400.<br>
+ So it really is wider than its tall.
+ Your monitor just squashes the pixels horizontally.<br>
+ If you want a regular 1.25 ratio image, you have to either
+ squeeze it horizontally or stretch it vertically by
+ using an image conversion program like Imagemagick.<br>
+
+</div><H2 id="h3" class="level2"><a name="h3"></a>4. Requirements</H2><div class="level2" id="divh3">
+
+GNU make is probably required.<br>
+The program only works in Linux (I don't know
+any other unix clones having /dev/vcs* -devices).
+
+</div><H2 id="download" class="level2"><a name="download"></a>5. Downloading</H2><div class="level2" id="divdownload">
+   The official home page of snapscreenshot
+   is at <a href="http://iki.fi/bisqwit/source/snapscreenshot.html">http://iki.fi/bisqwit/source/snapscreenshot.html</a>.<br>
+   Check there for new versions.
+</div> <p align=right><small>Generated from
+       <tt>progdesc.php</tt> (last updated: Mon, 31 Aug 2009 14:23:25 +0300)<br>
+  with <tt>docmaker.php</tt> (last updated: Mon, 31 Aug 2009 14:23:25 +0300)<br>
+  at Mon, 31 Aug 2009 14:23:25 +0300</small>
+ </p>
+</body>
+</html>
